@@ -7,6 +7,8 @@ from django.views.i18n import set_language
 
 from mezzanine.core.views import direct_to_template
 from mezzanine.conf import settings
+from django.conf.urls.static import static
+from django.conf import settings
 
 # Uncomment to use blog as home page. See also urlpatterns section below.
 # from mezzanine.blog import views as blog_views
@@ -97,7 +99,8 @@ urlpatterns += [
 
     # ("^%s/" % settings.SITE_PREFIX, include("mezzanine.urls"))
 
-]
+]+ static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+
 
 
 # Adds ``STATIC_URL`` to the context of error pages, so that error
