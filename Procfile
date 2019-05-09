@@ -1,1 +1,1 @@
-python manage.py collectstatic --noinput;web: gunicorn darkprince.wsgi
+web: gunicorn darkprince.wsgi
