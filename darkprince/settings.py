@@ -182,10 +182,9 @@ STATIC_URL = "/static/"
 # Don't put anything in this directory yourself; store your static files
 # in apps' "static/" subdirectories and in STATICFILES_DIRS.
 # Example: "/home/media/media.lawrence.com/static/"
-STATIC_ROOT = os.path.join(PROJECT_ROOT, STATIC_URL.strip("/"))
+STATIC_ROOT = os.path.join(PROJECT_ROOT, "darkprince/static"),
 STATICFILES_DIRS = [
     os.path.join(PROJECT_ROOT, "darkprince/static"),
-    "https://babablog.herokuapp.com/static"
 ]
 
 # URL that handles the media served from MEDIA_ROOT. Make sure to use a
