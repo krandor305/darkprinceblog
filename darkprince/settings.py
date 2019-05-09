@@ -347,5 +347,5 @@ except ImportError:
 else:
     set_dynamic_settings(globals())
 
-import mezzanine_heroku
-mezzanine_heroku.settings(locals())
+#import mezzanine_heroku
+#mezzanine_heroku.settings(locals())
