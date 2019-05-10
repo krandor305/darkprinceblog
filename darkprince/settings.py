@@ -102,6 +102,7 @@ ALLOWED_HOSTS = ['*']
 # timezone as the operating system.
 # If running in a Windows environment this must be set to the same as your
 # system time zone.
+SECRET_KEY = "q%)j3mzjiorgjs07xhg-g!nt&psrn!_77@%6c_sp1q3ho5(t5&"
 TIME_ZONE = 'UTC'
 
 # If you set this to True, Django will use timezone-aware datetimes.
