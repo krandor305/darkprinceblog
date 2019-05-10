@@ -176,7 +176,7 @@ CACHE_MIDDLEWARE_KEY_PREFIX = PROJECT_APP
 
 # URL prefix for static files.
 # Example: "http://media.lawrence.com/static/"
-STATIC_URL = "https://babablog.herokuapp.com/static"#"/static/"
+STATIC_URL = "https://babablog.herokuapp.com/darkprince/static"#"/static/"
 
 # Absolute path to the directory static files should be collected to.
 # Don't put anything in this directory yourself; store your static files
