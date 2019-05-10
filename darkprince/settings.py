@@ -184,7 +184,7 @@ STATIC_URL = "https://babablog.herokuapp.com/static"#"/static/"
 # Example: "/home/media/media.lawrence.com/static/"
 STATIC_ROOT = "darkprince/static"
 STATICFILES_DIRS = [
-    "darkprince/static",
+    "/static",
 ]
 
 
