@@ -15,4 +15,5 @@ from mezzanine.utils.conf import real_project_name
 os.environ.setdefault("DJANGO_SETTINGS_MODULE",
                       "%s.settings" % real_project_name("darkprince"))
 
-application = get_wsgi_application()
+from whitenoise.django import DjangoWhiteNoise
+application = DjangoWhiteNoise(application)
