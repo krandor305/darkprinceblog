@@ -182,9 +182,9 @@ STATIC_URL = "https://babablog.herokuapp.com/static"#"/static/"
 # Don't put anything in this directory yourself; store your static files
 # in apps' "static/" subdirectories and in STATICFILES_DIRS.
 # Example: "/home/media/media.lawrence.com/static/"
-STATIC_ROOT = "darkprince/darkprince/static"
+STATIC_ROOT = "darkprince/static"
 STATICFILES_DIRS = [
-    "darkprince/darkprince/static",
+    "darkprince/static",
 ]
 
 
