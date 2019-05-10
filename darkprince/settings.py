@@ -1,4 +1,5 @@
 
+
 from __future__ import absolute_import, unicode_literals
 import os
 
@@ -84,8 +85,6 @@ from django.utils.translation import ugettext_lazy as _
 # If True, the django-modeltranslation will be added to the
 # INSTALLED_APPS setting.
 USE_MODELTRANSLATION = False
-
-SECRET_KEY = "q%)j3mzjiorgjs07xhg-g!nt&psrn!_77@%6c_sp1q3ho5(t5&"
 
 
 ########################
@@ -176,19 +175,13 @@ CACHE_MIDDLEWARE_KEY_PREFIX = PROJECT_APP
 
 # URL prefix for static files.
 # Example: "http://media.lawrence.com/static/"
+STATIC_URL = "/static/"
 
 # Absolute path to the directory static files should be collected to.
 # Don't put anything in this directory yourself; store your static files
 # in apps' "static/" subdirectories and in STATICFILES_DIRS.
 # Example: "/home/media/media.lawrence.com/static/"
-STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-STATIC_URL = '/static/'
-STATICFILES_DIRS = (
-    os.path.join(BASE_DIR, 'static'),
-    # add more paths with static files here 
-)
-
+STATIC_ROOT = os.path.join(PROJECT_ROOT, STATIC_URL.strip("/"))
 
 # URL that handles the media served from MEDIA_ROOT. Make sure to use a
 # trailing slash.
@@ -348,6 +341,7 @@ except ImportError:
     pass
 else:
     set_dynamic_settings(globals())
+
 
 import mezzanine_heroku
 mezzanine_heroku.settings(locals())
