@@ -1,6 +1,8 @@
 """
-WSGI config for onlineshop project.
+WSGI config for basetest project.
+
 It exposes the WSGI callable as a module-level variable named ``application``.
+
 For more information on this file, see
 https://docs.djangoproject.com/en/1.11/howto/deployment/wsgi/
 """
@@ -11,6 +13,6 @@ from django.core.wsgi import get_wsgi_application
 from mezzanine.utils.conf import real_project_name
 
 os.environ.setdefault("DJANGO_SETTINGS_MODULE",
-                      "%s.heroku_settings" % real_project_name("darkprince"))
+                      "%s.settings" % real_project_name("darkprince"))
 
 application = get_wsgi_application()
