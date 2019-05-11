@@ -185,6 +185,7 @@ STATIC_URL = "/static/"
 #STATIC_ROOT = os.path.join(PROJECT_ROOT, STATIC_URL.strip("/"))
 STATICFILES_DIRS = (
   os.path.join(PROJECT_ROOT, 'static'),
+  "https://babablog.herokuapp.com/static",
 )
 
 
