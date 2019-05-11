@@ -9,6 +9,8 @@ from mezzanine.core.views import direct_to_template
 from mezzanine.conf import settings
 from django.conf.urls.static import static
 from django.conf import settings
+from django.views.static import serve
+from os import path
 
 # Uncomment to use blog as home page. See also urlpatterns section below.
 # from mezzanine.blog import views as blog_views
@@ -98,6 +100,7 @@ urlpatterns += [
     # need to use the ``SITE_PREFIX`` setting as well.
 
     # ("^%s/" % settings.SITE_PREFIX, include("mezzanine.urls"))
+    url(r'^static/(?P<path>.*)$', serve, {'document_root': path.join(settings.BASE_DIR, 'static/public')}),
 
 ]
 
